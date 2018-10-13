@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+    <com.stripe.android.view.CardInputWidget
+            android:id="@+id/card_input_widget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/cardLabel"/>
+    <Button
+            android:layout_width="203dp"
+            android:layout_height="43dp"
+            android:id="@+id/confirmButton" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="148dp" android:layout_marginStart="148dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="148dp"
+            android:layout_marginRight="148dp" android:layout_marginBottom="52dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:text="Confirm Payment"
+            app:layout_constraintHorizontal_bias="0.488" android:textSize="18sp"/>
+    <CheckBox
+            android:text="Remember Card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox" android:textSize="20sp"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="105dp"
+            android:layout_marginStart="105dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="120dp" android:layout_marginRight="120dp" android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/cardName"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/emailText"
+            android:textColor="@color/common_google_signin_btn_text_light_default" android:textSize="18sp"
+            android:hint="example@you.com"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/emailLabel" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"/>
+    <TextView
+            android:text="Complete Payment Below:"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:id="@+id/titleLabel" android:textSize="22sp"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginTop="16dp" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"/>
+    <TextView
+            android:text="Email for Digital Receipt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/emailLabel" android:textSize="20sp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="186dp" android:layout_marginRight="186dp"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused" android:layout_marginTop="59dp"
+            app:layout_constraintTop_toBottomOf="@+id/titleLabel" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/emailText"/>
+    <TextView
+            android:text="Card Information"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardLabel"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused" android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="252dp" android:layout_marginRight="252dp" android:layout_marginTop="86dp"
+            app:layout_constraintTop_toBottomOf="@+id/emailText"/>
+    <EditText
+            android:layout_width="239dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/cardName"
+            android:textColor="@color/common_google_signin_btn_text_light_default"
+            android:hint="Name on Card"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintTop_toBottomOf="@+id/card_input_widget"/>
+    <EditText
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/cardZipcode"
+            android:textColor="@color/common_google_signin_btn_text_light_default"
+            android:hint="Zipcode"
+            app:layout_constraintStart_toEndOf="@+id/cardName" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" app:layout_constraintTop_toBottomOf="@+id/card_input_widget"/>
+
+</android.support.constraint.ConstraintLayout>
+
