@@ -16,6 +16,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage
 import com.mhacks.jamesxu.tutor.Objects.User
+import com.mhacks.jamesxu.tutor.RegisterAndLogin.LoginActivity
 import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.activity_register.*
 import java.util.*
@@ -45,6 +46,13 @@ class ProfileActivity : AppCompatActivity() {
         //Update user
         update_button_profile.setOnClickListener {
             updateUser()
+        }
+
+        //Log out user
+        log_out_profile.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
         }
     }
 
