@@ -87,7 +87,7 @@ class UserItem(val uid: String, val name: String, val major: String, val price: 
     }
 
     override fun bind(viewHolder: ViewHolder, position: Int) {
-        viewHolder.itemView.about.text = "${name}, ${major}, ${price}"
+        viewHolder.itemView.about.text = "${name}, ${major}, $${price}"
         Picasso.get().load(profileImg).into(viewHolder.itemView.profile)
     }
 

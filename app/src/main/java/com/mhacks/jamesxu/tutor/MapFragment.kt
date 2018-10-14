@@ -67,7 +67,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
         mMap = p0
 
         // Add a marker in Sydney and move the camera
-        val michigan = LatLng(42.2780, -83.7382)
+        val michigan = LatLng(42.269361, -83.7425705)
         //mMap?.addMarker(MarkerOptions().position(michigan).title("University of Michigan"))
         mMap?.moveCamera(CameraUpdateFactory.newLatLng(michigan))
         mMap?.setMinZoomPreference(16f)
