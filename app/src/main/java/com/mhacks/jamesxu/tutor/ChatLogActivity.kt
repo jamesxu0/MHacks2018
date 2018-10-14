@@ -1,8 +1,11 @@
 package com.mhacks.jamesxu.tutor
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import com.google.firebase.database.*
 import com.mhacks.jamesxu.tutor.Objects.ChatMessage
 import com.mhacks.jamesxu.tutor.Objects.User
@@ -102,5 +105,16 @@ class ChatLogActivity : AppCompatActivity() {
                     Log.d("ChatLogActivity", "Failed to save chat message (toReference)")
                 }
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.chat, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        finish()
+        return true
     }
 }

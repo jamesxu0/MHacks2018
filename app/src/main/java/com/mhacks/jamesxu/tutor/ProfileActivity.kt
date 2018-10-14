@@ -34,6 +34,8 @@ class ProfileActivity : AppCompatActivity() {
         avgRating_profile.setText("Average Rating: ${currentUser!!.avgRating}/5.0")
         numRatings_profile.setText("Number of Ratings: ${currentUser!!.numRatings}")
 
+        supportActionBar?.title = "Profile"
+
         //Update photo
         photo_button_profile.setOnClickListener {
             val intent = Intent(Intent.ACTION_PICK)

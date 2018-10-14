@@ -79,15 +79,15 @@ class StudTutorActivity : AppCompatActivity() {
         val ref = FirebaseDatabase.getInstance().getReference("/accepted")
         ref.addChildEventListener(object: ChildEventListener {
             override fun onCancelled(p0: DatabaseError) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
             }
 
             override fun onChildMoved(p0: DataSnapshot, p1: String?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
             }
 
             override fun onChildChanged(p0: DataSnapshot, p1: String?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
             }
 
             override fun onChildAdded(p0: DataSnapshot, p1: String?) {
@@ -96,7 +96,7 @@ class StudTutorActivity : AppCompatActivity() {
                 val friendUid = user?.username
                 if (p0.key == currentUser?.uid) {
                     Log.d("James", ""+friendUid)
-                    val friendRef = FirebaseDatabase.getInstance().getReference("/users/$friendUid")
+                    val friendRef = FirebaseDatabase.getInstance().getReference("/users/$uid")
                     friendRef.addListenerForSingleValueEvent(object: ValueEventListener {
                         override fun onDataChange(p0: DataSnapshot) {
                             val friend = p0.getValue(User::class.java)
@@ -115,7 +115,7 @@ class StudTutorActivity : AppCompatActivity() {
             }
 
             override fun onChildRemoved(p0: DataSnapshot) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
             }
 
 
